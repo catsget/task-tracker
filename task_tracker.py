@@ -22,8 +22,10 @@ def main(operation: str, arg, arg2):
     commands = {
         "add": lambda: add_task(arg, arg2),
         "list": lambda: list_tasks(arg),
+        "show": lambda: show_task(arg),
         "delete": lambda: delete_task(arg),
         "update": lambda: update_task(arg, arg2),
+        "update-desc": lambda: update_task_desc(arg, arg2),
         "mark-done": lambda: mark_done(arg),
         "mark-in-progress": lambda: mark_in_progress(arg)
     }

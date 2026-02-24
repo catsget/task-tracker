@@ -14,7 +14,7 @@ def delete_task(id: str):
         print("Task deleted unsuccessfully. Check your ID")
         return
 
-    confirm = input("Are you sure? y or n: ")
+    confirm = input("Are you sure? (y, n): ")
 
     if confirm.lower() == "y":
         storage.tasks.pop(storage.tasks.index(selectedTask))
