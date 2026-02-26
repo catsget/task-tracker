@@ -10,10 +10,12 @@ def update_task_desc(id: str, new_desc: str):
                 break
 
         if not selected_task:
-            print("Task updated unsuccessfully. Check your ID")
+            print("Task not found")
             return
 
         selected_task.update_desc(new_desc)
         storage.save_tasks()
         print(f"Task updated successfully (ID: {selected_task.id})")
         return
+    else:
+        print("Check ID and Description")

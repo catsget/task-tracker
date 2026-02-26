@@ -14,3 +14,7 @@ def show_task(id: str):
             print(f"ID: {id}")
             print(name)
             print(desc if desc else "No description")
+        else:
+            print("Task not found")
+    else:
+        print("Tasks is empty")

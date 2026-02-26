@@ -9,10 +9,12 @@ def update_task(id: str, new_name: str):
                 break
         
         if not selected_task:
-            print("Task updated unsuccessfully. Check your ID")
+            print("Task not found")
             return
         
         selected_task.update_name(new_name)
         storage.save_tasks()
         print(f"Task updated successfully (ID: {selected_task.id})")
         return
+    else:
+        print("Check ID and Name")

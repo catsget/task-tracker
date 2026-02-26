@@ -8,9 +8,11 @@ def mark_done(id: str):
                 selectedTask = task
         
         if not selectedTask:
-            print("Task marked done unsuccessfully. Check your ID")
+            print("Task not found")
             return
         
         selectedTask.mark_done()
         storage.save_tasks()
         print(f"Task marked done successfully (ID: {selectedTask.id})")
+    else:
+        print("ID is required")

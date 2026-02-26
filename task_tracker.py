@@ -7,10 +7,12 @@ def show_usage():
     Usage: task-tracker <command> [arguments]
     
     Commands:
-        add <name>
+        add <name> [desc]
         list [status]
+        show <id>
         delete <id>
         update <id> <new name>
+        update-desc <id> <new desc>
         mark-done <id>
         mark-in-progress <id>
     """)

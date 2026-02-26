@@ -2,7 +2,7 @@ import storage
 
 def delete_task(id: str):
     if not storage.tasks:
-        print("No tasks found")
+        print("Tasks is empty")
         return
     selectedTask = None
     for task in storage.tasks:
@@ -11,7 +11,7 @@ def delete_task(id: str):
             break
 
     if not selectedTask:
-        print("Task deleted unsuccessfully. Check your ID")
+        print("Task not found")
         return
 
     confirm = input("Are you sure? (y, n): ")
